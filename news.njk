@@ -1,0 +1,10 @@
+---
+layout: base.njk
+title: Νέα
+---
+<main><section class="page-hero"><div class="wrap"><h1>Νέα</h1><p>Άρθρα, παρεμβάσεις και δημόσιες τοποθετήσεις.</p></div></section><section class="section"><div class="wrap"><div class="grid cards news-grid">
+{% set posts = collections.articles | reverse %}
+{% for post in posts %}
+<a class="card reveal news-card {% if loop.first %}news-feature{% endif %}" href="{{ post.url }}">{% if post.data.image %}<div class="card-media"><img alt="{{ post.data.title }}" loading="lazy" src="{{ post.data.image }}"/></div>{% endif %}<span class="date">{{ post.data.displayDate | default(post.data.date) }}</span><h3>{{ post.data.title }}</h3>{% if post.data.excerpt %}<p>{{ post.data.excerpt }}</p>{% endif %}<span class="read-more">Διαβάστε περισσότερα →</span></a>
+{% endfor %}
+</div></div></section></main>

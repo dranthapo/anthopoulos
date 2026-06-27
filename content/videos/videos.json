@@ -1,0 +1,7 @@
+{
+  "layout": "video.njk",
+  "tags": [
+    "videos"
+  ],
+  "permalink": "/videos/v/{{ page.fileSlug }}.html"
+}

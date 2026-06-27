@@ -1,0 +1,17 @@
+{
+  "name": "aanthopoulos-cms-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "2.0.1",
+    "js-yaml": "4.1.0"
+  },
+  "engines": {
+    "node": "18.x",
+    "npm": "9.x"
+  }
+}

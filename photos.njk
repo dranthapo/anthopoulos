@@ -1,0 +1,7 @@
+---
+layout: base.njk
+title: Φωτογραφίες
+---
+<main><section class="page-hero"><div class="wrap"><h1>Φωτογραφίες</h1><p>Ανακαλύψτε με μέσα από τις φωτογραφίες μου.</p></div></section><section class="section photos-section"><div class="wrap"><div class="photo-grid">
+{% for item in gallery.photos %}<figure class="photo-card reveal"><img src="{{ item.image }}" alt="{{ item.caption | default('Φωτογραφία') }}" loading="lazy" />{% if item.caption %}<figcaption>{{ item.caption }}</figcaption>{% endif %}</figure>{% endfor %}
+</div></div></section></main>

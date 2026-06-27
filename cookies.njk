@@ -1,0 +1,19 @@
+---
+layout: base.njk
+title: Cookies
+---
+<main>
+<section class="section"><div class="wrap narrow">
+<p class="eyebrow">Cookies</p>
+<h1 class="page-title">Πολιτική Cookies</h1>
+<div class="panel prose reveal">
+<p>Η ιστοσελίδα χρησιμοποιεί τα απολύτως απαραίτητα δεδομένα τοπικής αποθήκευσης για βασικές λειτουργίες, όπως η επιλογή dark/light/auto mode και η αποθήκευση της επιλογής σας για cookies.</p>
+<h2>Εξωτερικές υπηρεσίες</h2>
+<p>Ορισμένα στοιχεία της ιστοσελίδας μπορεί να φορτώνουν περιεχόμενο από τρίτες υπηρεσίες, όπως YouTube για βίντεο, Google News/RSS μέσω υπηρεσίας ανάγνωσης RSS για τις αναφορές Τύπου και σύνδεσμοι προς κοινωνικά δίκτυα.</p>
+<h2>Επιλογές</h2>
+<p>Μπορείτε να αποδεχθείτε ή να απορρίψετε τη φόρτωση μη απαραίτητων εξωτερικών υπηρεσιών από το μήνυμα cookies. Η επιλογή αποθηκεύεται μόνο στον browser σας.</p>
+<div class="cta"><button class="btn primary" onclick="localStorage.setItem('aa-cookie-consent','accepted');alert('Η επιλογή αποθηκεύτηκε.');window.dispatchEvent(new Event('aa-cookie-consent-change'))">Αποδοχή</button><button class="btn" onclick="localStorage.setItem('aa-cookie-consent','rejected');alert('Η επιλογή αποθηκεύτηκε.');window.dispatchEvent(new Event('aa-cookie-consent-change'))">Απόρριψη</button><button class="btn" onclick="localStorage.removeItem('aa-cookie-consent');alert('Η επιλογή διαγράφηκε. Ανανεώστε τη σελίδα για να εμφανιστεί ξανά το μήνυμα.')">Διαγραφή επιλογής</button></div>
+<p class="small">Τελευταία ενημέρωση: Ιούνιος 2026.</p>
+</div>
+</div></section>
+</main>

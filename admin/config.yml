@@ -1,0 +1,57 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: "https://aanthopoulos.gr"
+display_url: "https://aanthopoulos.gr"
+locale: "el"
+
+collections:
+  - name: "articles"
+    label: "Άρθρα / Νέα"
+    folder: "content/articles"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    preview_path: "articles/{{slug}}.html"
+    fields:
+      - { label: "Τίτλος", name: "title", widget: "string" }
+      - { label: "Ημερομηνία", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Ημερομηνία εμφάνισης", name: "displayDate", widget: "string", hint: "π.χ. 27 Ιουν 2026" }
+      - { label: "Εικόνα εξωφύλλου", name: "image", widget: "image", required: false }
+      - { label: "Σύντομη περιγραφή", name: "excerpt", widget: "text", required: false }
+      - { label: "Κείμενο άρθρου", name: "body", widget: "markdown" }
+  - name: "videos"
+    label: "Βίντεο"
+    folder: "content/videos"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    preview_path: "videos/v/{{slug}}.html"
+    fields:
+      - { label: "Τίτλος", name: "title", widget: "string" }
+      - { label: "Ημερομηνία", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Ημερομηνία εμφάνισης", name: "displayDate", widget: "string", hint: "π.χ. 27 Ιουν 2026" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image", required: false }
+      - { label: "YouTube embed URL", name: "youtube", widget: "string", required: false, hint: "π.χ. https://www.youtube.com/embed/VIDEO_ID" }
+      - { label: "Σημειώσεις", name: "body", widget: "markdown", required: false }
+  - name: "gallery"
+    label: "Φωτογραφίες"
+    files:
+      - label: "Gallery"
+        name: "gallery"
+        file: "_data/gallery.json"
+        fields:
+          - label: "Φωτογραφίες"
+            name: "photos"
+            widget: "list"
+            fields:
+              - { label: "Εικόνα", name: "image", widget: "image" }
+              - { label: "Λεζάντα", name: "caption", widget: "string", required: false }

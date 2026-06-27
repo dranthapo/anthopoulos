@@ -1,0 +1,8 @@
+---
+layout: base.njk
+title: Βίντεο
+---
+<main><section class="page-hero"><div class="wrap"><h1>Βίντεο</h1><p>Συνεντεύξεις, παρεμβάσεις και δημόσιες παρουσίες.</p></div></section><section class="section"><div class="wrap"><div class="grid video-grid">
+{% set vids = collections.videos | reverse %}
+{% for video in vids %}<a class="card reveal" href="{{ video.url }}">{% if video.data.thumbnail %}<div class="card-media"><img alt="{{ video.data.title }}" loading="lazy" src="{{ video.data.thumbnail }}"/></div>{% endif %}<span class="date">{{ video.data.displayDate | default(video.data.date) }}</span><h3>{{ video.data.title }}</h3></a>{% endfor %}
+</div></div></section></main>

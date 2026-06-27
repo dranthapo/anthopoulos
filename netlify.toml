@@ -1,0 +1,8 @@
+[build]
+  command = "npm install --no-audit --no-fund && npm run build"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "18.20.4"
+  NPM_VERSION = "9.9.4"
+  NPM_CONFIG_PRODUCTION = "false"

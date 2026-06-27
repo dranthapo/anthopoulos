@@ -1,0 +1,12 @@
+---
+layout: base.njk
+---
+<main class="article-page">
+  <article class="article-shell">
+    <a class="btn" href="/news.html">← Πίσω στα Νέα</a>
+    <p class="date" style="margin-top:30px">{{ displayDate }}</p>
+    <h1 style="font-size:clamp(38px,6vw,72px);line-height:1;letter-spacing:-.055em;margin:.2em 0">{{ title }}</h1>
+    {% if image %}<img alt="{{ title }}" class="article-hero-img" loading="lazy" src="{{ image }}" />{% endif %}
+    <div class="article-body panel">{{ content | safe }}</div>
+  </article>
+</main>
